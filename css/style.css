@@ -1,6 +1,3 @@
-body{
-    background-color: blue;
-}
 .header{
     background-color: #CF2B2B;
     width: 100%;
@@ -38,7 +35,43 @@ body{
     color: white;
 }
 .corpo{
-    background-color: antiquewhite;
+    background-color: #E5E5E5;
     width: 100%;
-    height: 1200px; /*tirar depois de concluidp*/
+    height: 1200px; /*tirar depois de concluido*/
+}
+.rodape{
+    background-color:white;
+    width: 100%;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+.fechar-pedido{
+    background-color: #CBCBCB;
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+.texto-fechar-pedido{
+    width: 210px;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
 }
