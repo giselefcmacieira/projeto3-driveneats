@@ -88,6 +88,9 @@
     padding-bottom: 16px;
     margin-right: 16px;
 }
+.opcoes:hover{
+    cursor: pointer;
+}
 .img-prato{
     width: 144px;
     height: 87px;
@@ -146,6 +149,7 @@
     width: 364px;
     height: 61px;
     border-radius: 50px;
+    border: none;
     display: flex;
     justify-content: center;
     align-items: center;
