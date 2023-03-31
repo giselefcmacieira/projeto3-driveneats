@@ -25,39 +25,39 @@
         <div class="container-opcoes"> <!--Prato principal-->
             <p>Primeiro, seu prato</p>
             <div class="box-opcoes">
-                <div class="opcoes prato"> <!-- Opção 1-->
-                    <img src="./imagens/frango.png" class="img-prato"/>
+                <div onclick="selecionarPrato('.prato1')" class="prato prato1 opcoes selecionado"> <!-- Opção 1-->
+                    <img src="./imagens/frango.png" class="img-prato"/> 
                     <p>Frango</p>
                     <p>Acompanha arroz, feijão, batata frita e salada</p>
-                    <p>R$ 14,90</p>
-                    <div class="check escondido">
+                    <p>R$ 15,90</p>
+                    <div class="prato check prato1 escondido">
                         <ion-icon name="checkmark-outline" class="icone"></ion-icon>
                     </div>
                 </div>
-                <div class="opcoes prato"> <!-- Opção 2-->
+                <div onclick="selecionarPrato('.prato2')" class="opcoes prato prato2"> <!-- Opção 2-->
                     <img src="./imagens/tropeiro.jpeg" class="img-prato"/> 
                     <p>Tropeiro</p>
                     <p>Acompanha couve, mandioquinha frita e salada</p>
                     <p>R$ 12,90</p>
-                    <div class="check escondido">
+                    <div class="prato check escondido prato2">
                         <ion-icon name="checkmark-outline" class="icone"></ion-icon>
                     </div>
                 </div>
-                <div class="opcoes prato">
-                    <img src="./imagens/churrasco.jpeg" class="img-prato"/> <!-- Opção 3-->
+                <div onclick="selecionarPrato('.prato3')" class="opcoes prato prato3"> <!-- Opção 3-->
+                    <img src="./imagens/churrasco.jpeg" class="img-prato"/> 
                     <p>Churrasco</p>
                     <p>Acompanha pão de alho, farofa e legumes</p>
                     <p>R$ 18,90</p>
-                    <div class="check escondido">
+                    <div class="prato check escondido prato3">
                         <ion-icon name="checkmark-outline" class="icone"></ion-icon>
                     </div>
                 </div>
-                <div class="opcoes prato">
-                    <img src="./imagens/carne-de-jaca.jpeg" class="img-prato"/> <!-- Opção 4-->
+                <div onclick="selecionarPrato('.prato4')" class="opcoes prato prato4"> <!-- Opção 4-->
+                    <img src="./imagens/carne-de-jaca.jpeg" class="img-prato"/> 
                     <p>Carne de Jaca</p>
                     <p>Acompanha arroz, feijão, batata frita e salada</p>
                     <p>R$ 10,90</p>
-                    <div class="check escondido">
+                    <div class="prato check escondido prato4">
                         <ion-icon name="checkmark-outline" class="icone"></ion-icon>
                     </div>
                 </div>
@@ -154,5 +154,6 @@
         </button>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
