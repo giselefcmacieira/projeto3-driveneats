@@ -11,6 +11,18 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 2;
 }
+a{
+    text-decoration: none;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    color: white;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
 .cab{
     display: flex;
     flex-direction: column;
@@ -146,7 +158,7 @@
 }
 .botao-desabilitado{
     background-color: #CBCBCB; /*#CBCBCB*/
-    width: 364px;
+    width: 80%;
     height: 61px;
     border-radius: 50px;
     border: none;
@@ -177,7 +189,8 @@
     text-align: center;
 }
 .texto-fechar-pedido{
-    width: 210px;
+    width: 80%;
+    margin: 0 auto;
     font-family: 'Roboto';
     font-style: normal;
     color: white;
