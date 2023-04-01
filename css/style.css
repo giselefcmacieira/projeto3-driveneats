@@ -144,8 +144,24 @@
     bottom: 0px;
     right: 0px;
 }
-.fechar-pedido{
-    background-color: #CBCBCB;
+.botao-desabilitado{
+    background-color: #CBCBCB; /*#CBCBCB*/
+    width: 364px;
+    height: 61px;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+}
+.botao-habilitado{
+    background-color: #32B72F;
     width: 364px;
     height: 61px;
     border-radius: 50px;
