@@ -9,13 +9,15 @@ let nomeSobremesa = '';
 let precoPrato = '';
 let precoBebida = '';
 let precoSobremesa = '';
-console.log(botao);
+let nomeCliente = '';
+let endereco = '';
 
 function fazerPedido(){
     if (infPrato !== '' & infBebida !== '' & infSobremesa !== ''){
                 botao.disabled = false;
                 const texto = document.querySelector('.botao-desabilitado .texto-fechar-pedido')
-                texto.innerHTML = "<a href='' class='link'>Fechar pedido</a>";            
+                //texto.innerHTML = "<a href='' class='link'>Fechar pedido</a>"; 
+                texto.innerHTML = "<a>Fechar Pedido</a>";         
                 botao.classList.remove('botao-desabilitado');
                 botao.classList.add('botao-habilitado');
                 console.log(texto);
@@ -114,7 +116,41 @@ function selecionarSobremesa(seletor){
     console.log(precoSobremesa);
     fazerPedido();
 }
+function finalizarPedido(){
+    nomeCliente = prompt('Qual seu nome?');
+    endereco = prompt('Qual o endereço?');
 
+    const precoTotal1 = Number(precoPrato)+Number(precoBebida)+Number(precoSobremesa);
+    const precoTotal = precoTotal1.toFixed(2);
+    const total = precoTotal.replace('.',',');
+
+    const precoP = precoPrato.replace('.',',');
+    const precoB = precoBebida.replace('.',',');
+    const precoS = precoSobremesa.replace('.',',');
+
+    const transparencia = document.querySelector('.transparencia');
+    const revisor = document.querySelector('.revisor');
+    const revisaoPraton = document.querySelector('.revisao-prato .nome');
+    const revisaoPratop = document.querySelector('.revisao-prato .preco');
+    const revisaoBebidan = document.querySelector('.revisao-bebida .nome');
+    const revisaoBebidap = document.querySelector('.revisao-bebida .preco');
+    const revisaoSobremesan = document.querySelector('.revisao-sobremesa .nome');
+    const revisaoSobremesap = document.querySelector('.revisao-sobremesa .preco');
+    const revisaoTotaln = document.querySelector('.total .nome');
+    const revisaoTotalp = document.querySelector('.total .preco');
+
+    revisaoPraton.innerHTML = nomePrato;
+    revisaoPratop.innerHTML = precoP;
+    revisaoBebidan.innerHTML = nomeBebida;
+    revisaoBebidap.innerHTML = precoB;
+    revisaoSobremesan.innerHTML = nomeSobremesa;
+    revisaoSobremesap.innerHTML = precoS;
+    revisaoTotaln.innerHTML = "TOTAL";
+    revisaoTotalp.innerHTML = "R$ " + total;
+
+    revisor.classList.remove('escondido');
+    transparencia.classList.remove('escondido');
+}
 function linkwpp(){
     const precoTotal1 = Number(precoPrato)+Number(precoBebida)+Number(precoSobremesa);
     const precoTotal = precoTotal1.toFixed(2);
@@ -124,9 +160,16 @@ function linkwpp(){
     const link3 = encodeURIComponent('- Prato: ' + nomePrato + '\n');
     const link4 = encodeURIComponent('- Bebida: ' + nomeBebida + '\n');
     const link5 = encodeURIComponent('- Sobremesa: ' + nomeSobremesa + '\n');
-    const link6 = encodeURIComponent('Total: R$ ' + total);
-    const link = link1 + link2 + link3 + link4 + link5 + link6;
-    const a = document.querySelector('.link');
+    const link6 = encodeURIComponent('Total: R$ ' + total + '\n\n');
+    const link7 = encodeURIComponent('Nome:' + nomeCliente + '\n');
+    const link8 = encodeURIComponent('Endereço:' + endereco + '\n');
+    const link = link1 + link2 + link3 + link4 + link5 + link6 + link7 + link8;
+    const a = document.querySelector('.link-wpp');
     a.href = link;
-    console.log(a);
+}
+function voltar(){
+    const transparencia = document.querySelector('.transparencia');
+    const revisor = document.querySelector('.revisor');
+    transparencia.classList.add('escondido');
+    revisor.classList.add('escondido');
 }

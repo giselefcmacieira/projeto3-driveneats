@@ -147,11 +147,38 @@
         </div>
     </div>
     <div class="rodape">
-            <button  data-test="order-btn" onclick="linkwpp()"class="botao-desabilitado">
+            <button  data-test="order-btn" onclick="finalizarPedido()" class="botao-desabilitado">
                 <div class="texto-fechar-pedido">
-                    <p>Selecione os 3 itens para fechar o pedido</p>
+                    <p>Selecione os 3 itens </br> para fechar o pedido</p>
                 </div>
             </button>
+    </div>
+    <div class="transparencia escondido">
+        <div data-test="confirm-order-modal" class="revisor escondido">
+            <div class="titulo">Confirme seu pedido</div>
+            <div class="revisao-prato">
+                <p class="nome"></p>
+                <p class="preco"></p>
+            </div>
+            <div class="revisao-bebida">
+                <p class="nome"></p>
+                <p class="preco"></p>
+            </div>
+            <div class="revisao-sobremesa">
+                <p class="nome"></p>
+                <p class="preco"></p>
+            </div>
+            <div class="total">
+                <p class="nome"></p>
+                <p class="preco"></p>
+            </div>
+            <button data-test="confirm-order-btn" onclick = "linkwpp()" class="botao-confirmar">
+                <a class="link-wpp">Tudo certo, pode pedir!</a>
+            </button>
+            <button data-test="cancel-order-btn" onclick = "voltar()" class="cancelar">
+                Cancelar
+            </button>
+        </div>
     </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="script.js"></script>
