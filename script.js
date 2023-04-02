@@ -9,8 +9,6 @@ let nomeSobremesa = '';
 let precoPrato = '';
 let precoBebida = '';
 let precoSobremesa = '';
-let nomeCliente = '';
-let endereco = '';
 
 function fazerPedido(){
     if (infPrato !== '' & infBebida !== '' & infSobremesa !== ''){
@@ -117,9 +115,6 @@ function selecionarSobremesa(seletor){
     fazerPedido();
 }
 function finalizarPedido(){
-    nomeCliente = prompt('Qual seu nome?');
-    endereco = prompt('Qual o endereço?');
-
     const precoTotal1 = Number(precoPrato)+Number(precoBebida)+Number(precoSobremesa);
     const precoTotal = precoTotal1.toFixed(2);
     const total = precoTotal.replace('.',',');
@@ -152,6 +147,8 @@ function finalizarPedido(){
     transparencia.classList.remove('escondido');
 }
 function linkwpp(){
+    const nomeCliente = prompt('Qual seu nome?');
+    const endereco = prompt('Qual o endereço?');
     const precoTotal1 = Number(precoPrato)+Number(precoBebida)+Number(precoSobremesa);
     const precoTotal = precoTotal1.toFixed(2);
     const total = precoTotal.replace('.',',');
