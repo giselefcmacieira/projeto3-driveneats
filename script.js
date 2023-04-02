@@ -152,7 +152,7 @@ function linkwpp(){
     const precoTotal1 = Number(precoPrato)+Number(precoBebida)+Number(precoSobremesa);
     const precoTotal = precoTotal1.toFixed(2);
     const total = precoTotal.replace('.',',');
-    const link1 = "https://wa.me/5531993265917?text=";
+    const link1 = "https://wa.me/?text=";
     const link2 = encodeURIComponent("Olá, gostaria de fazer o pedido:\n")
     const link3 = encodeURIComponent('- Prato: ' + nomePrato + '\n');
     const link4 = encodeURIComponent('- Bebida: ' + nomeBebida + '\n');
