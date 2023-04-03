@@ -158,8 +158,8 @@ function linkwpp(){
     const link4 = encodeURIComponent('- Bebida: ' + nomeBebida + '\n');
     const link5 = encodeURIComponent('- Sobremesa: ' + nomeSobremesa + '\n');
     const link6 = encodeURIComponent('Total: R$ ' + total + '\n\n');
-    const link7 = encodeURIComponent('Nome:' + nomeCliente + '\n');
-    const link8 = encodeURIComponent('Endereço:' + endereco + '\n');
+    const link7 = encodeURIComponent('Nome: ' + nomeCliente + '\n');
+    const link8 = encodeURIComponent('Endereço: ' + endereco + '\n');
     const link = link1 + link2 + link3 + link4 + link5 + link6 + link7 + link8;
     const a = document.querySelector('.link-wpp');
     a.href = link;
